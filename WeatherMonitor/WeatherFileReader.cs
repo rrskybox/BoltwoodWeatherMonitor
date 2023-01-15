@@ -163,7 +163,10 @@ namespace WeatherMonitor
         private string WeatherData(WeaData wDataField)
         {
             //Returns the data string to which the wData enum refers
-            return (weaList[(int)wDataField]);
+            string field = "0";
+            if (weaList.Count > 0)
+                field = (weaList[(int)wDataField]);
+            return field;
         }
 
         #region Weather Data Properties

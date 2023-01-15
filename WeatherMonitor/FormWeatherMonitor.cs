@@ -92,7 +92,6 @@ namespace WeatherMonitor
             if (cloudNow > maxCloud) maxCloud = cloudNow;
             cFIFO.Enqueue(cloudNow);
             avgCloud = (int)cFIFO.Average();
-            wmon = null;
             return;
         }
 
